@@ -1,12 +1,17 @@
 defmodule OEmbed.Mixfile do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [app: :oembed,
-     version: "0.1.0",
-     elixir: "~> 1.4",
+     version: @version,
+     elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
+     docs: docs(),
      deps: deps()]
   end
 
@@ -15,7 +20,7 @@ defmodule OEmbed.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger]]
+    [extra_applications: [:httpoison, :logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -28,6 +33,25 @@ defmodule OEmbed.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:credo, "~> 0.6.1", only: :dev}]
+    [{:httpoison, ">= 0.9.0"},
+     {:credo, "~> 0.6.1", only: :dev}]
+  end
+
+  defp docs do
+    [source_url: "https://github.com/r8/elixir-oembed",
+     source_ref: "v#{@version}",
+     main: OEmbed]
+  end
+
+  defp description do
+    """
+    oEmbed consumer for Elixir.
+    """
+  end
+
+  defp package do
+    [maintainers: ["Sergey Storchay"],
+     licenses: ["MIT"],
+     links: %{"Github" => "https://github.com/r8/elixir-oembed"}]
   end
 end

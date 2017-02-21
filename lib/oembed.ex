@@ -4,6 +4,6 @@ defmodule OEmbed do
   """
 
   def for(url) do
-    IO.inspect url
+    OEmbed.DiscoverProvider.get(url)
   end
 end
