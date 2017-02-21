@@ -1,18 +1,5 @@
 defmodule OEmbed do
   @moduledoc """
-  Documentation for OEmbed.
+  oEmbed consumer for Elixir.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> OEmbed.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
