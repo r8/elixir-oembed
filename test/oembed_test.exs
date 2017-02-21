@@ -7,6 +7,9 @@ defmodule OEmbedTest do
   end
 
   test "for" do
-    OEmbed.for("https://www.youtube.com/watch?v=K4aeibd1Rrc")
+    IO.inspect OEmbed.for("https://www.youtube.com/watch?v=K4aeibd1Rrc")
+    IO.inspect OEmbed.for("http://www.youtube.com/watch?v=K4aeibd1Rrc")
+    IO.inspect OEmbed.for("https://www.instagram.com/p/BQwNhqoADJn/")
+    IO.inspect OEmbed.for("http://www.instagram.com/p/BQwNhqoADJn/")
   end
 end
