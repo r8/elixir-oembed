@@ -1,6 +1,10 @@
 defmodule OEmbed.DiscoverProvider do
   alias OEmbed.{Link, Photo, Rich, Video}
 
+  def provides?(url) do
+    true
+  end
+
   def get(url) do
     with {:ok, href} <- discover(url),
       {:ok, oembed} <- get_oembed(href) do
