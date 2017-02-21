@@ -3,8 +3,6 @@ defmodule OEmbedTest do
   doctest OEmbed
 
   test "the truth" do
-    photo = %OEmbed.Photo{}
-
-    IO.inspect photo
+    assert 1 + 1 == 2
   end
 end
