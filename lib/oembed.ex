@@ -4,6 +4,15 @@ defmodule OEmbed do
   """
 
   def for(url) do
-    OEmbed.DiscoverProvider.get(url)
+    case Enum.find(get_providers(), fn(provider) -> provider.provides?(url) end) do
+      nil ->
+        {:error, "oEmbed not found"}
+      provider ->
+        provider.get(url)
+    end
+  end
+
+  defp get_providers do
+    [OEmbed.InstagramProvider, OEmbed.DiscoverProvider]
   end
 end
