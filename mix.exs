@@ -34,6 +34,8 @@ defmodule OEmbed.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:httpoison, ">= 0.9.0"},
+     {:floki, ">= 0.9.0"},
+     {:poison, ">= 1.5.0"},
      {:credo, "~> 0.6.1", only: :dev}]
   end
 
