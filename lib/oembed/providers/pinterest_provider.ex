@@ -8,9 +8,11 @@ defmodule OEmbed.PinterestProvider do
   end
 
   def get(url) do
-    Rich.new(%{
+    oembed = Rich.new(%{
       html: get_pin_html(url)
     })
+
+    {:ok, oembed}
   end
 
   def get_pin_html(url) do
