@@ -13,6 +13,8 @@ defmodule OEmbed do
   end
 
   defp get_providers do
-    [OEmbed.InstagramProvider, OEmbed.DiscoverProvider]
+    [OEmbed.InstagramProvider,
+     OEmbed.PinterestProvider,
+     OEmbed.DiscoverProvider]
   end
 end
