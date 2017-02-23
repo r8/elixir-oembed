@@ -14,5 +14,7 @@ defmodule OEmbedTest do
     IO.inspect OEmbed.for("http://www.instagram.com/p/BQ/")
     IO.inspect OEmbed.for("https://www.youtube.com/watch?v=K4a")
     IO.inspect OEmbed.for("https://www.google.com")
+    IO.inspect OEmbed.for("https://pinterest.com/pin/41025046586545679/")
+    IO.inspect OEmbed.for("https://ru.pinterest.com/pin/41025046586545679/")
   end
 end
