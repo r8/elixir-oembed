@@ -1,6 +1,6 @@
 defmodule OEmbed.Resource do
   @moduledoc """
-  oEmbed resource
+  oEmbed resource.
   """
 
   defmacro __using__(_) do
