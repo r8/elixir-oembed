@@ -1,4 +1,7 @@
 defmodule OEmbed.InstagramProvider do
+  @moduledoc """
+  oEmbed provider for Instagram URLs.
+  """
   use OEmbed.Provider
 
   @oembed_endpoint "https://api.instagram.com/oembed?url="

@@ -1,4 +1,7 @@
 defmodule OEmbed.PinterestProvider do
+  @moduledoc """
+  oEmbed provider for Pinterest URLs.
+  """
   use OEmbed.Provider
 
   alias OEmbed.Rich
