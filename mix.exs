@@ -37,6 +37,7 @@ defmodule OEmbed.Mixfile do
      {:floki, ">= 0.9.0"},
      {:poison, ">= 1.5.0"},
      {:exconstructor, ">= 1.0.0"},
+     {:exvcr, "~> 0.8", only: :test},
      {:credo, "~> 0.6.1", only: :dev}]
   end
 

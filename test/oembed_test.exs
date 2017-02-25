@@ -1,20 +1,13 @@
 defmodule OEmbedTest do
-  use ExUnit.Case
-  doctest OEmbed
+  use ExUnit.Case, async: false
+  use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  test "the truth" do
-    assert 1 + 1 == 2
-  end
+  alias OEmbed.Video
 
-  test "for" do
-    IO.inspect OEmbed.for("https://www.youtube.com/watch?v=K4aeibd1Rrc")
-    IO.inspect OEmbed.for("http://www.youtube.com/watch?v=K4aeibd1Rrc")
-    IO.inspect OEmbed.for("https://www.instagram.com/p/BQwNhqoADJn/")
-    IO.inspect OEmbed.for("http://www.instagram.com/p/BQwNhqoADJn/")
-    IO.inspect OEmbed.for("http://www.instagram.com/p/BQ/")
-    IO.inspect OEmbed.for("https://www.youtube.com/watch?v=K4a")
-    IO.inspect OEmbed.for("https://www.google.com")
-    IO.inspect OEmbed.for("https://pinterest.com/pin/41025046586545679/")
-    IO.inspect OEmbed.for("https://ru.pinterest.com/pin/41025046586545679/")
+  test "gets video oembed for valid youtube url" do
+    use_cassette "youtube_valid" do
+      {:ok, %Video{} = oembed} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+      assert oembed.html =~ "<iframe"
+    end
   end
 end
