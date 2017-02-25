@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "follow_redirect": true,
+        "ssl_options": {
+          "versions": [
+            "tlsv1.2"
+          ]
+        }
+      },
+      "request_body": "",
+      "url": "https://api.instagram.com/oembed?url=https://www.instagram.com/p/invalid_url/"
+    },
+    "response": {
+      "body": "No Media Match",
+      "headers": {
+        "Cache-Control": "private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 25 Feb 2017 17:21:32 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+        "Vary": "Cookie, Accept-Language",
+        "Content-Language": "en",
+        "Pragma": "no-cache",
+        "Set-Cookie": "csrftoken=kzuYiWaLTG2vPPEuuQk8lQnCHCEkRLgl; expires=Sat, 24-Feb-2018 17:21:32 GMT; Max-Age=31449600; Path=/; Secure",
+        "Connection": "keep-alive",
+        "Content-Length": "14"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  }
+]

@@ -1,20 +1,53 @@
 defmodule OEmbedTest do
-  use ExUnit.Case
-  doctest OEmbed
+  use ExUnit.Case, async: false
+  use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  alias OEmbed.Video
+  alias OEmbed.Rich
+
+  test "gets video oembed for valid youtube url" do
+    use_cassette "youtube_valid" do
+      {:ok, %Video{} = oembed} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+      assert oembed.html =~ "<iframe"
+    end
   end
 
-  test "for" do
-    IO.inspect OEmbed.for("https://www.youtube.com/watch?v=K4aeibd1Rrc")
-    IO.inspect OEmbed.for("http://www.youtube.com/watch?v=K4aeibd1Rrc")
-    IO.inspect OEmbed.for("https://www.instagram.com/p/BQwNhqoADJn/")
-    IO.inspect OEmbed.for("http://www.instagram.com/p/BQwNhqoADJn/")
-    IO.inspect OEmbed.for("http://www.instagram.com/p/BQ/")
-    IO.inspect OEmbed.for("https://www.youtube.com/watch?v=K4a")
-    IO.inspect OEmbed.for("https://www.google.com")
-    IO.inspect OEmbed.for("https://pinterest.com/pin/41025046586545679/")
-    IO.inspect OEmbed.for("https://ru.pinterest.com/pin/41025046586545679/")
+  test "gets error respone for invalid youtube url" do
+    use_cassette "youtube_invalid" do
+      {:error, _} = OEmbed.for("https://www.youtube.com/watch?v=invalid_url")
+    end
+  end
+
+  test "gets rich oembed for valid instagram url" do
+    use_cassette "instagram_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.instagram.com/p/7OZIdGDvFT/")
+      assert oembed.html =~ "instagram-media"
+    end
+  end
+
+  test "gets rich oembed for valid instagram short url" do
+    use_cassette "instagram_short_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("http://instagr.am/p/7OZIdGDvFT/")
+      assert oembed.html =~ "instagram-media"
+    end
+  end
+
+  test "gets error respone for invalid instagram url" do
+    use_cassette "instagram_invalid" do
+      {:error, _} = OEmbed.for("https://www.instagram.com/p/invalid_url/")
+    end
+  end
+
+  test "gets rich oembed for valid pinterest pin url" do
+    use_cassette "pinterest_pin_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.pinterest.com/pin/731483164446834719/")
+      assert oembed.html =~ "embedPin"
+    end
+  end
+
+  test "gets error respone for invalid pinterest url" do
+    use_cassette "pinterest_pin_invalid" do
+      {:error, _} = OEmbed.for("https://www.pinterest.com/pin/invalid_url/")
+    end
   end
 end

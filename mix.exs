@@ -6,7 +6,7 @@ defmodule OEmbed.Mixfile do
   def project do
     [app: :oembed,
      version: @version,
-     elixir: "~> 1.2",
+     elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: description(),
@@ -37,6 +37,8 @@ defmodule OEmbed.Mixfile do
      {:floki, ">= 0.9.0"},
      {:poison, ">= 1.5.0"},
      {:exconstructor, ">= 1.0.0"},
+     {:exvcr, "~> 0.8", only: :test},
+     {:inch_ex, only: :docs},
      {:credo, "~> 0.6.1", only: :dev}]
   end
 
