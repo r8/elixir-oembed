@@ -38,6 +38,7 @@ defmodule OEmbed.Mixfile do
      {:poison, ">= 1.5.0"},
      {:exconstructor, ">= 1.0.0"},
      {:exvcr, "~> 0.8", only: :test},
+     {:inch_ex, only: :docs},
      {:credo, "~> 0.6.1", only: :dev}]
   end
 
