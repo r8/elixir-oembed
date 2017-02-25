@@ -7,7 +7,10 @@ defmodule OEmbed.Provider do
     quote do
       import OEmbed.Provider
 
-      alias OEmbed.{Link, Photo, Rich, Video}
+      alias OEmbed.Link
+      alias OEmbed.Photo
+      alias OEmbed.Rich
+      alias OEmbed.Video
 
       @behaviour OEmbed.Provider
 
