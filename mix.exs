@@ -6,7 +6,7 @@ defmodule OEmbed.Mixfile do
   def project do
     [app: :oembed,
      version: @version,
-     elixir: "~> 1.2",
+     elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: description(),
