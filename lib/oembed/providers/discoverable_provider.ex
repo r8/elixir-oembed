@@ -1,10 +1,20 @@
-defmodule OEmbed.DiscoverProvider do
+defmodule OEmbed.DiscoverableProvider do
+  @moduledoc """
+  oEmbed provider for discoverable endpoints.
+  """
+
   use OEmbed.Provider
 
+  @doc """
+  Check if this provider supports given URL.
+  """
   def provides?(_) do
     true
   end
 
+  @doc """
+  Get oEmbed result for given URL.
+  """
   def get(url) do
     with {:ok, href} <- discover(url),
       {:ok, oembed} <- get_oembed(href) do
@@ -15,7 +25,7 @@ defmodule OEmbed.DiscoverProvider do
     end
   end
 
-  def discover(url) do
+  defp discover(url) do
     with {:ok, %HTTPoison.Response{body: html}} <- HTTPoison.get(url, [], [follow_redirect: true, ssl: [{:versions, [:'tlsv1.2']}]]),
       [_ | _] = tags <- Floki.find(html, "head link[type='application/json+oembed']"),
        {"link", attributes, _} <- List.first(tags),
