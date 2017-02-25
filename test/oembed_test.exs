@@ -10,4 +10,10 @@ defmodule OEmbedTest do
       assert oembed.html =~ "<iframe"
     end
   end
+
+  test "gets error respone for invalid youtube url" do
+    use_cassette "youtube_invalid" do
+      {:error, _} = OEmbed.for("https://www.youtube.com/watch?v=invalid_url")
+    end
+  end
 end
