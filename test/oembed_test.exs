@@ -5,6 +5,14 @@ defmodule OEmbedTest do
   alias OEmbed.Video
   alias OEmbed.Rich
 
+  test "gets error response for nil" do
+    {:error, _} = OEmbed.for(nil)
+  end
+
+  test "gets error response for empty string" do
+    {:error, _} = OEmbed.for("")
+  end
+
   test "gets video oembed for valid youtube url" do
     use_cassette "youtube_valid" do
       {:ok, %Video{} = oembed} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
@@ -12,7 +20,7 @@ defmodule OEmbedTest do
     end
   end
 
-  test "gets error respone for invalid youtube url" do
+  test "gets error response for invalid youtube url" do
     use_cassette "youtube_invalid" do
       {:error, _} = OEmbed.for("https://www.youtube.com/watch?v=invalid_url")
     end
@@ -32,7 +40,7 @@ defmodule OEmbedTest do
     end
   end
 
-  test "gets error respone for invalid instagram url" do
+  test "gets error response for invalid instagram url" do
     use_cassette "instagram_invalid" do
       {:error, _} = OEmbed.for("https://www.instagram.com/p/invalid_url/")
     end
@@ -45,7 +53,7 @@ defmodule OEmbedTest do
     end
   end
 
-  test "gets error respone for invalid pinterest url" do
+  test "gets error response for invalid pinterest url" do
     use_cassette "pinterest_pin_invalid" do
       {:error, _} = OEmbed.for("https://www.pinterest.com/pin/invalid_url/")
     end

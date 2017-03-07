@@ -1,7 +1,8 @@
 # Change Log
 
 ## [Unreleased]
-### Added
+### Fixed
+- Fix crashing when URL is empty or nil. 
 
 ### Changed
 

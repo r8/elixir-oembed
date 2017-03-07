@@ -42,7 +42,8 @@ defmodule OEmbed do
   {:ok, result} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
   ```
   """
-  def for(url) do
+  def for(_url = ""), do: {:error, "Empty URL"}
+  def for(url) when is_binary(url) do
     case Enum.find(get_providers(), fn(provider) -> provider.provides?(url) end) do
       nil ->
         {:error, "oEmbed not found"}
@@ -50,6 +51,7 @@ defmodule OEmbed do
         provider.get(url)
     end
   end
+  def for(_), do: {:error, "Empty URL"}
 
   defp get_providers do
     @core_providers
