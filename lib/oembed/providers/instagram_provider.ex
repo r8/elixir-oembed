@@ -4,7 +4,7 @@ defmodule OEmbed.InstagramProvider do
   """
   use OEmbed.Provider
 
-  @oembed_endpoint "https://api.instagram.com/publicapi/oembed/?url="
+  @oembed_endpoint "https://api.instagram.com/oembed?url="
 
   @doc """
   Check if this provider supports given URL.
