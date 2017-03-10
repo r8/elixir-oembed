@@ -1,5 +1,9 @@
 # Change Log
 
+## [UNRELEASED] - 2017-03-08
+### Fixed
+- Encode Instagram photo URL in API request.
+
 ## [0.1.1] - 2017-03-08
 ### Fixed
 - Fix crashing when URL is empty or nil. 

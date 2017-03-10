@@ -33,7 +33,7 @@ defmodule OEmbed.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, ">= 0.9.0"},
+    [{:httpoison, ">= 0.9.0 and <= 0.11.0"},
      {:floki, ">= 0.9.0"},
      {:poison, ">= 1.5.0"},
      {:exconstructor, ">= 1.0.0"},
