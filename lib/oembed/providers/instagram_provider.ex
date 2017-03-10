@@ -17,6 +17,6 @@ defmodule OEmbed.InstagramProvider do
   Get oEmbed result for given URL.
   """
   def get(url) do
-    get_oembed(@oembed_endpoint <> url)
+    get_oembed(@oembed_endpoint <> URI.encode(url, &URI.char_unreserved?/1))
   end
 end
