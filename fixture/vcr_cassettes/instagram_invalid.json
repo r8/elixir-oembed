@@ -13,19 +13,19 @@
         }
       },
       "request_body": "",
-      "url": "https://api.instagram.com/oembed?url=https://www.instagram.com/p/invalid_url/"
+      "url": "https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.instagram.com%2Fp%2Finvalid_url%2F"
     },
     "response": {
       "body": "No Media Match",
       "headers": {
-        "Cache-Control": "private, no-cache, no-store, must-revalidate",
-        "Date": "Sat, 25 Feb 2017 17:21:32 GMT",
-        "Content-Type": "text/html; charset=utf-8",
         "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
-        "Vary": "Cookie, Accept-Language",
+        "Cache-Control": "private, no-cache, no-store, must-revalidate",
+        "Date": "Fri, 10 Mar 2017 14:02:19 GMT",
         "Content-Language": "en",
         "Pragma": "no-cache",
-        "Set-Cookie": "csrftoken=kzuYiWaLTG2vPPEuuQk8lQnCHCEkRLgl; expires=Sat, 24-Feb-2018 17:21:32 GMT; Max-Age=31449600; Path=/; Secure",
+        "Content-Type": "text/html; charset=utf-8",
+        "Vary": "Cookie, Accept-Language",
+        "Set-Cookie": "csrftoken=IvVruU3wSbfi7UhUFeTjxYJb6eMkYA2E; expires=Fri, 09-Mar-2018 14:02:19 GMT; Max-Age=31449600; Path=/; Secure",
         "Connection": "keep-alive",
         "Content-Length": "14"
       },
