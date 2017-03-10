@@ -4,6 +4,9 @@
 ### Fixed
 - Encode Instagram photo URL in API request.
 
+### Changed
+- Set Httpoison dependency requirements to prevent crash.
+
 ## [0.1.1] - 2017-03-08
 ### Fixed
 - Fix crashing when URL is empty or nil. 
