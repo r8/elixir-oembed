@@ -10,7 +10,7 @@ defmodule OEmbed.InstagramProvider do
   Check if this provider supports given URL.
   """
   def provides?(url) do
-    Regex.match?(~r/^(?:(?:http|https):\/\/)?(?:www.)?(?:instagram.com|instagr.am)\/([A-Za-z0-9-_]+)/im, url)
+    Regex.match?(~r/^(?:http|https):\/\/(?:www\.)?(?:instagram.com|instagr.am)\/(?:[A-Za-z0-9-_\/]+)$/i, url)
   end
 
   @doc """
