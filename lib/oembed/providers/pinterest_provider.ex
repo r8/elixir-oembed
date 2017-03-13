@@ -10,7 +10,7 @@ defmodule OEmbed.PinterestProvider do
   Check if this provider supports given URL.
   """
   def provides?(url) do
-    Regex.match?(~r/^(?:(?:http|https):\/\/)?(?:[A-Za-z0-9-_]+\.)*?(?:pinterest.com)\/(?:pin)?\/(?:[0-9-_]+)/im, url)
+    Regex.match?(~r/^(?:http|https):\/\/(?:[A-Za-z]+\.)?pinterest\.com\/[A-Za-z0-9-_\/]+/i, url)
   end
 
   @doc """
