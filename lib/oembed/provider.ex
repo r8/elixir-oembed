@@ -34,4 +34,4 @@ defmodule OEmbed.Provider do
 
   @callback provides?(String.t) :: boolean
   @callback get(String.t) :: struct
- end
+end
