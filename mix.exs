@@ -20,7 +20,8 @@ defmodule OEmbed.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:httpoison, :exconstructor],
-     extra_applications: [:logger]]
+     extra_applications: [:logger],
+     env: [third_party_providers: []]]
   end
 
   # Dependencies can be Hex packages:
