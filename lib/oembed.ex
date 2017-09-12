@@ -61,6 +61,6 @@ defmodule OEmbed do
   end
 
   defp third_party_providers do
-    Application.get_env(:oembed, :third_party_providers)
+    Application.get_env(:oembed, :providers)
   end
 end

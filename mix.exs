@@ -21,7 +21,7 @@ defmodule OEmbed.Mixfile do
   def application do
     [applications: [:httpoison, :exconstructor],
      extra_applications: [:logger],
-     env: [third_party_providers: []]]
+     env: [providers: []]]
   end
 
   # Dependencies can be Hex packages:

@@ -40,5 +40,5 @@ end
 You can implement modules that support provider behaviour and add them to the provider list from your app config
 
 ```elixir
-config :oembed, :third_party_providers, [MyApp.OEmbed.SomeProvider, MyApp.OEmbed.SomeOtherProvider]
+config :oembed, :providers, [MyApp.OEmbed.SomeProvider, MyApp.OEmbed.SomeOtherProvider]
 ```
