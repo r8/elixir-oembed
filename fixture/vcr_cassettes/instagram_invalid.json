@@ -18,14 +18,14 @@
     "response": {
       "body": "No Media Match",
       "headers": {
-        "Content-Type": "text/html; charset=utf-8",
-        "Vary": "Cookie, Accept-Language",
+        "Date": "Tue, 14 Mar 2017 12:57:21 GMT",
+        "Pragma": "no-cache",
         "Cache-Control": "private, no-cache, no-store, must-revalidate",
         "Content-Language": "en",
-        "Pragma": "no-cache",
         "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
-        "Date": "Fri, 10 Mar 2017 14:46:36 GMT",
-        "Set-Cookie": "mid=WMK8TAAEAAFvfkASmX1YH6Q6Tun0; expires=Thu, 05-Mar-2037 14:46:36 GMT; Max-Age=630720000; Path=/",
+        "Vary": "Cookie, Accept-Language",
+        "Content-Type": "text/html; charset=utf-8",
+        "Set-Cookie": "csrftoken=u4BZCYPnRdwexoS5WWHCpRqExNeMlV91; expires=Tue, 13-Mar-2018 12:57:21 GMT; Max-Age=31449600; Path=/; Secure",
         "Connection": "keep-alive",
         "Content-Length": "14"
       },
