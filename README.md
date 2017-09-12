@@ -34,3 +34,11 @@ end
 ```elixir
 {:ok, result} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 ```
+
+## 3rd party providers
+
+You can implement modules that support provider behaviour and add them to the provider list from your app config
+
+```elixir
+config :oembed, :providers, [MyApp.OEmbed.SomeProvider, MyApp.OEmbed.SomeOtherProvider]
+```
