@@ -1,11 +1,13 @@
 # Change Log
 
-## [UNRELEASED] - 2017-03-08
+## [UNRELEASED]
+
+## [0.2.0] - 2017-09-13
+### Added
+- Ability to add custom providers via mix config in parent application (thanks to @slavone)
+
 ### Fixed
 - Encode Instagram photo URL in API request.
-
-### Changed
-- Set Httpoison dependency requirements to prevent crash.
 
 ## [0.1.1] - 2017-03-08
 ### Fixed
