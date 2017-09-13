@@ -18,7 +18,7 @@ defmodule OEmbed do
 
   ```elixir
   def deps do
-    [{:oembed, "~> 0.1.0"}]
+    [{:oembed, "~> 0.2.0"}]
   end
   ```
 
@@ -26,6 +26,14 @@ defmodule OEmbed do
 
   ```elixir
   {:ok, result} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+  ```
+
+  ## Custom providers
+
+  You can implement modules that support provider behaviour and add them to the provider list from your app config
+
+  ```elixir
+  config :oembed, :providers, [MyApp.OEmbed.SomeProvider, MyApp.OEmbed.SomeOtherProvider]
   ```
   """
 

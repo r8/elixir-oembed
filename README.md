@@ -25,7 +25,7 @@ Add `oembed` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:oembed, "~> 0.1.0"}]
+  [{:oembed, "~> 0.2.0"}]
 end
 ```
 
@@ -35,7 +35,7 @@ end
 {:ok, result} = OEmbed.for("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 ```
 
-## 3rd party providers
+## Custom providers
 
 You can implement modules that support provider behaviour and add them to the provider list from your app config
 
