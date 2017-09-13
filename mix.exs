@@ -34,15 +34,15 @@ defmodule OEmbed.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, ">= 0.9.0 and <= 0.11.0"},
+    [{:httpoison, ">= 0.9.0"},
      {:floki, ">= 0.9.0"},
      {:poison, ">= 1.5.0"},
      {:exconstructor, ">= 1.0.0"},
-     {:exvcr, "~> 0.8", only: :test},
-     {:inch_ex, only: :docs},
-     {:credo, "~> 0.6.1", only: :dev},
+     {:exvcr, "~> 0.9", only: :test},
+     {:inch_ex, ">= 0.0.0", only: :docs},
      {:earmark, ">= 0.0.0", only: :dev},
-     {:ex_doc, "~> 0.10", only: :dev}]
+     {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+     {:credo, "~> 0.8", only: [:dev, :test], runtime: false}]
   end
 
   defp docs do
