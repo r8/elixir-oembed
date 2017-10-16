@@ -28,14 +28,14 @@ defmodule OEmbedTest do
 
   test "gets rich oembed for valid instagram url" do
     use_cassette "instagram_valid" do
-      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.instagram.com/p/7OZIdGDvFT/")
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.instagram.com/p/BaOHwvclrzJ/")
       assert oembed.html =~ "instagram-media"
     end
   end
 
   test "gets rich oembed for valid instagram short url" do
     use_cassette "instagram_short_valid" do
-      {:ok, %Rich{} = oembed} = OEmbed.for("http://instagr.am/p/7OZIdGDvFT/")
+      {:ok, %Rich{} = oembed} = OEmbed.for("http://instagr.am/p/BaOHwvclrzJ/")
       assert oembed.html =~ "instagram-media"
     end
   end
