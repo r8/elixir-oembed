@@ -28,14 +28,14 @@ defmodule OEmbedTest do
 
   test "gets rich oembed for valid instagram url" do
     use_cassette "instagram_valid" do
-      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.instagram.com/p/7OZIdGDvFT/")
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.instagram.com/p/BaOHwvclrzJ/")
       assert oembed.html =~ "instagram-media"
     end
   end
 
   test "gets rich oembed for valid instagram short url" do
     use_cassette "instagram_short_valid" do
-      {:ok, %Rich{} = oembed} = OEmbed.for("http://instagr.am/p/7OZIdGDvFT/")
+      {:ok, %Rich{} = oembed} = OEmbed.for("http://instagr.am/p/BaOHwvclrzJ/")
       assert oembed.html =~ "instagram-media"
     end
   end
@@ -56,6 +56,20 @@ defmodule OEmbedTest do
   test "gets error response for invalid pinterest url" do
     use_cassette "pinterest_pin_invalid" do
       {:error, _} = OEmbed.for("https://www.pinterest.com/pin/invalid_url/")
+    end
+  end
+
+  test "gets oembed for valid url with relative oembed api link using http" do
+    use_cassette "playbuzz_http_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("http://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once")
+      assert oembed.html =~ "pb_feed"
+    end
+  end
+
+  test "gets oembed for valid url with relative oembed api link using https" do
+    use_cassette "playbuzz_https_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once")
+      assert oembed.html =~ "pb_feed"
     end
   end
 end

@@ -5,7 +5,7 @@
       "headers": [],
       "method": "get",
       "options": {
-        "follow_redirect": true,
+        "follow_redirect": "true",
         "ssl_options": {
           "versions": [
             "tlsv1.2"
@@ -18,14 +18,14 @@
     "response": {
       "body": "No Media Match",
       "headers": {
-        "Date": "Tue, 14 Mar 2017 12:57:21 GMT",
-        "Pragma": "no-cache",
+        "Content-Type": "text/html; charset=utf-8",
         "Cache-Control": "private, no-cache, no-store, must-revalidate",
-        "Content-Language": "en",
+        "Pragma": "no-cache",
         "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
         "Vary": "Cookie, Accept-Language",
-        "Content-Type": "text/html; charset=utf-8",
-        "Set-Cookie": "csrftoken=u4BZCYPnRdwexoS5WWHCpRqExNeMlV91; expires=Tue, 13-Mar-2018 12:57:21 GMT; Max-Age=31449600; Path=/; Secure",
+        "Content-Language": "en",
+        "Date": "Mon, 16 Oct 2017 11:18:31 GMT",
+        "Set-Cookie": "rur=FTW; Path=/",
         "Connection": "keep-alive",
         "Content-Length": "14"
       },
