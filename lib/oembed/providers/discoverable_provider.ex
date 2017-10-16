@@ -30,9 +30,9 @@ defmodule OEmbed.DiscoverableProvider do
          [_ | _] = tags <- Floki.find(html, "head link[type='application/json+oembed']"),
          {"link", attributes, _} <- List.first(tags),
          %{"href" => href} <- Enum.into(attributes, %{}),
-         oembed_url <- URI.merge(url, href) |> URI.to_string
+         oembed_url = %URI{} <- URI.merge(url, href)
     do
-      {:ok, oembed_url}
+      {:ok, URI.to_string(oembed_url)}
     else
       _ -> {:error, "oEmbed url not found"}
     end
