@@ -11,7 +11,9 @@ defmodule OEmbed.Mixfile do
      start_permanent: Mix.env == :prod,
      description: description(),
      package: package(),
-     docs: docs(),
+     docs: [source_ref: @version,
+            main: "readme",
+            extras: ["README.md"]],
      deps: deps()]
   end
 
