@@ -11,9 +11,7 @@ defmodule OEmbed.Mixfile do
      start_permanent: Mix.env == :prod,
      description: description(),
      package: package(),
-     docs: [source_ref: @version,
-            main: "readme",
-            extras: ["README.md"]],
+     docs: docs(),
      deps: deps()]
   end
 
@@ -50,7 +48,8 @@ defmodule OEmbed.Mixfile do
   defp docs do
     [source_url: "https://github.com/r8/elixir-oembed",
      source_ref: "v#{@version}",
-     main: OEmbed]
+     main: "readme",
+     extras: ["README.md"]]
   end
 
   defp description do
