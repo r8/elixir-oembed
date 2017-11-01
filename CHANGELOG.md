@@ -1,7 +1,6 @@
 # Change Log
 
-## [UNRELEASED]
-
+## [0.2.1] - 2017-11-02
 ### Fixed
 - Fix handling of relative endpoint urls (thanks to [@slavone](https://github.com/slavone))
 
