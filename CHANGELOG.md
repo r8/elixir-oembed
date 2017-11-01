@@ -2,9 +2,12 @@
 
 ## [UNRELEASED]
 
+### Fixed
+- Fix handling of relative endpoint urls (thanks to [@slavone](https://github.com/slavone))
+
 ## [0.2.0] - 2017-09-13
 ### Added
-- Ability to add custom providers via mix config in parent application (thanks to @slavone)
+- Ability to add custom providers via mix config in parent application (thanks to [@slavone](https://github.com/slavone))
 
 ### Fixed
 - Encode Instagram photo URL in API request.
