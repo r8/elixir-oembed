@@ -2,8 +2,8 @@ defmodule OEmbedTest do
   use ExUnit.Case, async: false
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  alias OEmbed.Video
   alias OEmbed.Rich
+  alias OEmbed.Video
 
   test "gets error response for nil" do
     {:error, _} = OEmbed.for(nil)
@@ -56,6 +56,19 @@ defmodule OEmbedTest do
   test "gets error response for invalid pinterest url" do
     use_cassette "pinterest_pin_invalid" do
       {:error, _} = OEmbed.for("https://www.pinterest.com/pin/invalid_url/")
+    end
+  end
+
+  test "gets rich oembed for valid soundcloud url" do
+    use_cassette "soundcloud_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://soundcloud.com/forss/flickermood")
+      assert oembed.html =~ "soundcloud.com/player"
+    end
+  end
+
+  test "gets error response for invalid soundcloud url" do
+    use_cassette "soundcloud_invalid" do
+      {:error, _} = OEmbed.for("https://soundcloud.com/invalid_user/invalid_track")
     end
   end
 

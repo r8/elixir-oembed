@@ -27,7 +27,7 @@ defmodule OEmbed.DiscoverableProvider do
 
   defp discover(url) do
     with {:ok, %HTTPoison.Response{body: html}} <- HTTPoison.get(url, [], [follow_redirect: true, ssl: [{:versions, [:'tlsv1.2']}]]),
-         [_ | _] = tags <- Floki.find(html, "head link[type='application/json+oembed']"),
+         [_ | _] = tags <- Floki.find(html, "head link[type$='json+oembed']"),
          {"link", attributes, _} <- List.first(tags),
          %{"href" => href} <- Enum.into(attributes, %{}),
          oembed_url = %URI{} <- URI.merge(url, href)
