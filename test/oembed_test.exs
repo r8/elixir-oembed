@@ -59,6 +59,19 @@ defmodule OEmbedTest do
     end
   end
 
+  test "gets rich oembed for valid soundcloud url" do
+    use_cassette "soundcloud_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://soundcloud.com/forss/flickermood")
+      assert oembed.html =~ "soundcloud.com/player"
+    end
+  end
+
+  test "gets error response for invalid soundcloud url" do
+    use_cassette "soundcloud_invalid" do
+      {:error, _} = OEmbed.for("https://soundcloud.com/invalid_user/invalid_track")
+    end
+  end
+
   test "gets oembed for valid url with relative oembed api link using http" do
     use_cassette "playbuzz_http_valid" do
       {:ok, %Rich{} = oembed} = OEmbed.for("http://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once")
