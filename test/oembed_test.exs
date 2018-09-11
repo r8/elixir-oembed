@@ -2,8 +2,8 @@ defmodule OEmbedTest do
   use ExUnit.Case, async: false
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  alias OEmbed.Video
   alias OEmbed.Rich
+  alias OEmbed.Video
 
   test "gets error response for nil" do
     {:error, _} = OEmbed.for(nil)
