@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.2.2] - 2018-09-11
+### Fixed
+- Fix link selector for Discoverable provider (thanks to [@juanbono](https://github.com/juanbono))
+
 ## [0.2.1] - 2017-11-02
 ### Fixed
 - Fix handling of relative endpoint urls (thanks to [@slavone](https://github.com/slavone))
