@@ -1,0 +1,34 @@
+[
+  {
+    "request":{
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "follow_redirect": "true",
+        "ssl_options": {
+          "versions": [
+            "tlsv1.2"
+          ]
+        }
+      },
+      "request_body": "",
+      "url": "https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fplayer.vimeo.com%2Fvideos%2F123123123%2F"
+    },
+    "response": {
+     "body": "{\"width\":480,\"video_id\":301578941,\"version\":\"1.0\",\"uri\":\"\/videos\/301578941\",\"upload_date\":\"2018-11-19 05:47:26\",\"type\":\"video\",\"title\":\"embed test\",\"thumbnail_width\":295,\"thumbnail_url_with_play_button\":\"https:\/\/i.vimeocdn.com\/filter\/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F740162198_295x166.jpg&src1=https%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png\",\"thumbnail_url\":\"https:\/\/i.vimeocdn.com\/video\/740162198_295x166.jpg\",\"thumbnail_height\":221,\"provider_url\":\"https:\/\/vimeo.com\/\",\"provider_name\":\"Vimeo\",\"is_plus\":\"1\",\"html\":\"<iframe src=\\\"https:\/\/player.vimeo.com\/video\/123123123?app_id=123123\\\" width=\\\"480\\\" height=\\\"360\\\" frameborder=\\\"0\\\" title=\\\"embed test\\\" allow=\\\"autoplay; fullscreen\\\" allowfullscreen><\/iframe>\",\"height\":360,\"duration\":30,\"domain_status_code\":403,\"description\":\"\",\"author_url\":\"https:\/\/vimeo.com\/user123123123\",\"author_name\":\"The origional author\",\"account_type\":\"plus\"}",
+   "headers": {
+     "Content-Type": "application/json",
+     "Cache-Control": "max-age=60",
+     "Expires": "Mon, 19 Nov 2018 13:01:31 GMT",
+     "Content-Length": "928",
+     "Date": "Mon, 19 Nov 2018 13:00:31 GMT",
+     "Connection": "keep-alive",
+     "Vary": "User-Agent,Accept-Encoding"
+   },
+   "status_code": 200,
+   "type": "ok"
+   }
+ }
+]
+

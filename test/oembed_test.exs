@@ -74,15 +74,31 @@ defmodule OEmbedTest do
 
   test "gets oembed for valid url with relative oembed api link using http" do
     use_cassette "playbuzz_http_valid" do
-      {:ok, %Rich{} = oembed} = OEmbed.for("http://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once")
+      {:ok, %Rich{} = oembed} =
+        OEmbed.for(
+          "http://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once"
+        )
+
       assert oembed.html =~ "pb_feed"
     end
   end
 
   test "gets oembed for valid url with relative oembed api link using https" do
     use_cassette "playbuzz_https_valid" do
-      {:ok, %Rich{} = oembed} = OEmbed.for("https://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once")
+      {:ok, %Rich{} = oembed} =
+        OEmbed.for(
+          "https://www.playbuzz.com/avibwx10/every-southerner-must-have-these-eats-at-least-once"
+        )
+
       assert oembed.html =~ "pb_feed"
+    end
+  end
+
+  test "gets rich oembed for valid vimeo url" do
+    use_cassette "vimeo_valid", match_requests_on: [:query] do
+      {:ok, %Video{} = oembed} = OEmbed.for("https://player.vimeo.com/videos/123123123/")
+
+      assert oembed.html =~ "vimeo"
     end
   end
 end
