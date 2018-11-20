@@ -1,7 +1,6 @@
 # OEmbed
 
 [![Build Status](https://travis-ci.org/r8/elixir-oembed.svg?branch=master)](https://travis-ci.org/r8/elixir-oembed)
-[![Deps Status](https://beta.hexfaktor.org/badge/all/github/r8/elixir-oembed.svg)](https://beta.hexfaktor.org/github/r8/elixir-oembed)
 [![Inline docs](https://inch-ci.org/github/r8/elixir-oembed.svg?branch=master&style=flat)](http://inch-ci.org/github/r8/elixir-oembed)
 [![Ebert](https://ebertapp.io/github/r8/elixir-oembed.svg)](https://ebertapp.io/github/r8/elixir-oembed)
 [![Hex.pm](https://img.shields.io/hexpm/v/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
