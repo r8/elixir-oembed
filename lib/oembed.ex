@@ -5,7 +5,8 @@ defmodule OEmbed do
 
   @core_providers [
     OEmbed.InstagramProvider,
-    OEmbed.PinterestProvider
+    OEmbed.PinterestProvider,
+    OEmbed.VimeoProvider
   ]
 
   @fallback_providers [OEmbed.DiscoverableProvider]
@@ -20,14 +21,17 @@ defmodule OEmbed do
   ```
   """
   def for(""), do: {:error, "Empty URL"}
+
   def for(url) when is_binary(url) do
-    case Enum.find(get_providers(), fn(provider) -> provider.provides?(url) end) do
+    case Enum.find(get_providers(), fn provider -> provider.provides?(url) end) do
       nil ->
         {:error, "oEmbed not found"}
+
       provider ->
         provider.get(url)
     end
   end
+
   def for(_), do: {:error, "Invalid URL format"}
 
   defp get_providers do
