@@ -1,16 +1,20 @@
 # Change Log
 
+## [Unreleased]
+### Added
+- Add Vimeo provider ([@fatboypunk](https://github.com/fatboypunk))
+
 ## [0.2.2] - 2018-09-11
 ### Fixed
-- Fix link selector for Discoverable provider (thanks to [@juanbono](https://github.com/juanbono))
+- Fix link selector for Discoverable provider
 
 ## [0.2.1] - 2017-11-02
 ### Fixed
-- Fix handling of relative endpoint urls (thanks to [@slavone](https://github.com/slavone))
+- Fix handling of relative endpoint urls ([@slavone](https://github.com/slavone))
 
 ## [0.2.0] - 2017-09-13
 ### Added
-- Ability to add custom providers via mix config in parent application (thanks to [@slavone](https://github.com/slavone))
+- Ability to add custom providers via mix config in parent application ([@slavone](https://github.com/slavone))
 
 ### Fixed
 - Encode Instagram photo URL in API request.
