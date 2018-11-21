@@ -17,6 +17,7 @@ Among them:
 
   - Instagram
   - Pinterest
+  - Vimeo
 
 ## Installation
 
