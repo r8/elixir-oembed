@@ -1,6 +1,6 @@
 # Change Log
 
-## [Unreleased]
+## [0.3.0] - 
 ### Added
 - Add Vimeo provider ([@fatboypunk](https://github.com/fatboypunk))
 
