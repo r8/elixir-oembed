@@ -17,8 +17,8 @@ defmodule OEmbed.DiscoverableProvider do
   """
   def get(url) do
     with {:ok, href} <- discover(url),
-      {:ok, oembed} <- get_oembed(href) do
-        {:ok, oembed}
+         {:ok, oembed} <- get_oembed(href) do
+      {:ok, oembed}
     else
       _ ->
         {:error, "oEmbed not found"}
