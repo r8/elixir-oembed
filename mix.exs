@@ -1,27 +1,31 @@
 defmodule OEmbed.Mixfile do
   use Mix.Project
 
-  @version "0.2.2"
+  @version "0.3.0"
 
   def project do
-    [app: :oembed,
-     version: @version,
-     elixir: "~> 1.3",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: description(),
-     package: package(),
-     docs: docs(),
-     deps: deps()]
+    [
+      app: :oembed,
+      version: @version,
+      elixir: "~> 1.3",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
+      docs: docs(),
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:httpoison, :exconstructor],
-     extra_applications: [:logger],
-     env: [providers: []]]
+    [
+      applications: [:httpoison, :exconstructor],
+      extra_applications: [:logger],
+      env: [providers: []]
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -34,22 +38,26 @@ defmodule OEmbed.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, ">= 0.9.0"},
-     {:floki, ">= 0.24.0"},
-     {:poison, ">= 1.5.0"},
-     {:exconstructor, ">= 1.0.0"},
-     {:exvcr, "~> 0.9", only: :test},
-     {:inch_ex, ">= 0.0.0", only: :docs},
-     {:earmark, ">= 0.0.0", only: :dev},
-     {:ex_doc, "~> 0.16", only: :dev, runtime: false},
-     {:credo, "~> 0.8", only: [:dev, :test], runtime: false}]
+    [
+      {:httpoison, ">= 0.9.0"},
+      {:floki, ">= 0.24.0"},
+      {:poison, ">= 1.5.0"},
+      {:exconstructor, ">= 1.0.0"},
+      {:exvcr, "~> 0.9", only: :test},
+      {:inch_ex, ">= 0.0.0", only: :docs},
+      {:earmark, ">= 0.0.0", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false},
+      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
+    ]
   end
 
   defp docs do
-    [source_url: "https://github.com/r8/elixir-oembed",
-     source_ref: "v#{@version}",
-     main: "readme",
-     extras: ["README.md"]]
+    [
+      source_url: "https://github.com/r8/elixir-oembed",
+      source_ref: "v#{@version}",
+      main: "readme",
+      extras: ["README.md"]
+    ]
   end
 
   defp description do
@@ -59,8 +67,10 @@ defmodule OEmbed.Mixfile do
   end
 
   defp package do
-    [maintainers: ["Sergey Storchay"],
-     licenses: ["MIT"],
-     links: %{"Github" => "https://github.com/r8/elixir-oembed"}]
+    [
+      maintainers: ["Sergey Storchay"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/r8/elixir-oembed"}
+    ]
   end
 end

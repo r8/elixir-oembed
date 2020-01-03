@@ -17,8 +17,8 @@ defmodule OEmbed.DiscoverableProvider do
   """
   def get(url) do
     with {:ok, href} <- discover(url),
-      {:ok, oembed} <- get_oembed(href) do
-        {:ok, oembed}
+         {:ok, oembed} <- get_oembed(href) do
+      {:ok, oembed}
     else
       _ ->
         {:error, "oEmbed not found"}
@@ -32,7 +32,7 @@ defmodule OEmbed.DiscoverableProvider do
            html
            |> Floki.parse_document()
            |> elem(1)
-           |> Floki.find("head link[type$='json+oembed']"),
+           |> Floki.find("head link[type$='json+oembed']),
          {"link", attributes, _} <- List.first(tags),
          %{"href" => href} <- Enum.into(attributes, %{}),
          oembed_url = %URI{} <- URI.merge(url, href) do
