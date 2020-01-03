@@ -19,22 +19,30 @@ defmodule OEmbed.PinterestProvider do
   def get(url) do
     case get_page_type(url) do
       {:ok, "pin"} ->
-        oembed = Rich.new(%{
-          html: get_pin_html(url)
-        })
+        oembed =
+          Rich.new(%{
+            html: get_pin_html(url)
+          })
+
         {:ok, oembed}
+
       _ ->
         {:error, "Error getting oEmbed"}
     end
   end
 
   defp get_page_type(url) do
-    with {:ok, %HTTPoison.Response{body: html}} <- HTTPoison.get(url, [], [follow_redirect: true, ssl: [{:versions, [:'tlsv1.2']}]]),
-      [_ | _] = tags <- Floki.find(html, "head meta[property='og:type']"),
-       {"meta", attributes, _} <- List.first(tags),
-       %{"content" => content} <- Enum.into(attributes, %{}),
-       %{"type" => type} <- Regex.named_captures(~r/^pinterestapp\:(?<type>.+)/, content) do
-        {:ok, type}
+    with {:ok, %HTTPoison.Response{body: html}} <-
+           HTTPoison.get(url, [], follow_redirect: true, ssl: [{:versions, [:"tlsv1.2"]}]),
+         [_ | _] = tags <-
+           html
+           |> Floki.parse_document()
+           |> elem(1)
+           |> Floki.find("head meta[property='og:type']"),
+         {"meta", attributes, _} <- List.first(tags),
+         %{"content" => content} <- Enum.into(attributes, %{}),
+         %{"type" => type} <- Regex.named_captures(~r/^pinterestapp\:(?<type>.+)/, content) do
+      {:ok, type}
     else
       _ -> {:error, "Error getting page type"}
     end

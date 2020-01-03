@@ -35,7 +35,7 @@ defmodule OEmbed.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:httpoison, ">= 0.9.0"},
-     {:floki, ">= 0.9.0"},
+     {:floki, ">= 0.24.0"},
      {:poison, ">= 1.5.0"},
      {:exconstructor, ">= 1.0.0"},
      {:exvcr, "~> 0.9", only: :test},
