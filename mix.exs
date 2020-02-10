@@ -40,7 +40,7 @@ defmodule OEmbed.Mixfile do
   defp deps do
     [
       {:httpoison, ">= 0.9.0"},
-      {:floki, ">= 0.9.0"},
+      {:floki, ">= 0.24.0"},
       {:poison, ">= 1.5.0"},
       {:exconstructor, ">= 1.0.0"},
       {:exvcr, "~> 0.9", only: :test},
