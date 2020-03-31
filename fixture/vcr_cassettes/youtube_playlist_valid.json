@@ -1,0 +1,38 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "follow_redirect": "true",
+        "ssl_options": {
+          "versions": [
+            "tlsv1.2"
+          ]
+        }
+      },
+      "request_body": "",
+      "url": "http://www.youtube.com/oembed?format=json&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPL634F2B56B8C346A2"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"type\":\"video\",\"provider_url\":\"https:\\/\\/www.youtube.com\\/\",\"author_name\":\"Deborah Back\",\"thumbnail_url\":\"https:\\/\\/i.ytimg.com\\/vi\\/C2xel6q0yao\\/hqdefault.jpg\",\"author_url\":\"https:\\/\\/www.youtube.com\\/user\\/DeborahBack\",\"provider_name\":\"YouTube\",\"version\":\"1.0\",\"thumbnail_height\":360,\"html\":\"\\u003ciframe width=\\\"480\\\" height=\\\"270\\\" src=\\\"https:\\/\\/www.youtube.com\\/embed\\/videoseries?list=PL634F2B56B8C346A2\\\" frameborder=\\\"0\\\" allow=\\\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\\\" allowfullscreen\\u003e\\u003c\\/iframe\\u003e\",\"thumbnail_width\":480,\"title\":\"Rick Astley playlist\",\"width\":480,\"height\":270}",
+      "headers": {
+        "Expires": "Tue, 27 Apr 1971 19:44:06 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "P3P": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=nl for more info.\"",
+        "Date": "Tue, 31 Mar 2020 12:38:38 GMT",
+        "Server": "YouTube Frontend Proxy",
+        "X-XSS-Protection": "0",
+        "Accept-Ranges": "none",
+        "Vary": "Accept-Encoding",
+        "Transfer-Encoding": "chunked"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

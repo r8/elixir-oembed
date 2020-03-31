@@ -13,19 +13,19 @@
         }
       },
       "request_body": "",
-      "url": "http://www.youtube.com/oembed?format=json&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dinvalid_id"
+      "url": "http://www.youtube.com/oembed?format=json&url=https%3A%2F%2Fyoutu.be%2Finvalid__id"
     },
     "response": {
       "binary": false,
       "body": "Not Found",
       "headers": {
-        "Cache-Control": "no-cache",
         "Content-Type": "text/html; charset=utf-8",
         "P3P": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=nl for more info.\"",
-        "X-Content-Type-Options": "nosniff",
-        "Content-Length": "9",
         "Expires": "Tue, 27 Apr 1971 19:44:06 GMT",
-        "Date": "Tue, 31 Mar 2020 12:38:39 GMT",
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "no-cache",
+        "Content-Length": "9",
+        "Date": "Tue, 31 Mar 2020 11:28:55 GMT",
         "Server": "YouTube Frontend Proxy",
         "X-XSS-Protection": "0"
       },
