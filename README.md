@@ -15,6 +15,7 @@ oEmbed consumer library for Elixir applications.
 This library supports any discoverable oEmbed endpoint and some other services via custom adapters.
 Among them:
 
+  - YouTube
   - Instagram
   - Pinterest
   - Vimeo
