@@ -20,9 +20,37 @@ defmodule OEmbedTest do
     end
   end
 
-  test "gets error response for invalid youtube url" do
+  test "gets error response for invalid youtube id" do
     use_cassette "youtube_invalid" do
-      {:error, _} = OEmbed.for("https://www.youtube.com/watch?v=invalid_url")
+      {:error, _} = OEmbed.for("https://www.youtube.com/watch?v=invalid_id")
+    end
+  end
+
+  test "gets video oembed for valid youtube playlist" do
+    use_cassette "youtube_playlist_valid" do
+      {:ok, %Video{} = oembed} =
+        OEmbed.for("https://www.youtube.com/playlist?list=PL634F2B56B8C346A2")
+
+      assert oembed.html =~ "<iframe"
+    end
+  end
+
+  test "gets video oembed for invalid youtube playlist" do
+    use_cassette "youtube_playlist_invalid" do
+      {:error, _} = OEmbed.for("https://www.youtube.com/playlist?list=invalid_list")
+    end
+  end
+
+  test "gets video oembed for valid youtu.be url" do
+    use_cassette "youtu_be_valid" do
+      {:ok, %Video{} = oembed} = OEmbed.for("https://youtu.be/dQw4w9WgXcQ")
+      assert oembed.html =~ "<iframe"
+    end
+  end
+
+  test "gets error response for invalid youtu.be id" do
+    use_cassette "youtu_be_invalid" do
+      {:error, _} = OEmbed.for("https://youtu.be/invalid__id")
     end
   end
 
