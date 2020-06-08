@@ -1,6 +1,10 @@
 # Change Log
 
-## [0.3.0] - 
+## [UNRELEASED] -  
+### Added
+- Add Youtube provider ([@Kuret](https://github.com/Kuret))
+
+## [0.3.0] - 2019-03-27
 ### Added
 - Add Vimeo provider ([@fatboypunk](https://github.com/fatboypunk))
 
