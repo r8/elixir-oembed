@@ -1,6 +1,6 @@
 # Change Log
 
-## [UNRELEASED] -  
+## [0.4.0] - 2020-07-21
 ### Added
 - Add Youtube provider ([@Kuret](https://github.com/Kuret))
 
