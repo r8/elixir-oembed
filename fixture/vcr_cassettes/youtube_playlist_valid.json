@@ -13,7 +13,7 @@
         }
       },
       "request_body": "",
-      "url": "http://www.youtube.com/oembed?format=json&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPL634F2B56B8C346A2"
+      "url": "https://www.youtube.com/oembed?format=json&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPL634F2B56B8C346A2"
     },
     "response": {
       "binary": false,
