@@ -4,7 +4,7 @@ defmodule OEmbed.YoutubeProvider do
   """
   use OEmbed.Provider
 
-  @oembed_endpoint "http://www.youtube.com/oembed?format=json&url="
+  @oembed_endpoint "https://www.youtube.com/oembed?format=json&url="
 
   @doc """
   Check if this provider supports given URL.
