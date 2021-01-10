@@ -1,7 +1,6 @@
 # OEmbed
 
 [![Build Status](https://travis-ci.org/r8/elixir-oembed.svg?branch=master)](https://travis-ci.org/r8/elixir-oembed)
-[![Inline docs](https://inch-ci.org/github/r8/elixir-oembed.svg?branch=master&style=flat)](http://inch-ci.org/github/r8/elixir-oembed)
 [![Hex.pm](https://img.shields.io/hexpm/v/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
 [![Hex.pm](https://img.shields.io/hexpm/dt/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
 
