@@ -52,7 +52,6 @@ jobs:
           mix local.hex --force
           mix deps.get
           mix deps.compile
-          mix dialyzer --plt
 
   static_code_analysis:
     name: Static Code Analysis
