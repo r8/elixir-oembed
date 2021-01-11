@@ -1,6 +1,6 @@
 # OEmbed
 
-![CI](https://github.com/r8/elixir-oembed/workflows/CI/badge.svg)
+[![CI](https://github.com/r8/elixir-oembed/workflows/CI/badge.svg)](https://github.com/r8/elixir-oembed/actions?query=workflow%3ACI)
 [![Hex.pm](https://img.shields.io/hexpm/v/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
 [![Hex.pm](https://img.shields.io/hexpm/dt/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
 
