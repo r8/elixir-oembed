@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.4.1] - 2021-01-14
+### Fixed
+- Call the youtube oembed with https ([@fatboypunk](https://github.com/fatboypunk))
+
 ## [0.4.0] - 2020-07-21
 ### Added
 - Add Youtube provider ([@Kuret](https://github.com/Kuret))
