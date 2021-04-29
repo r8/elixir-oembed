@@ -21,7 +21,7 @@ defmodule OEmbed.Resource do
         thumbnail_height: nil
       ]
 
-      defstruct @common_keys ++ @keys
+      defstruct Keyword.merge(@common_keys, @keys)
 
       use ExConstructor
     end
