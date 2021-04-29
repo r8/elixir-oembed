@@ -7,7 +7,7 @@ defmodule OEmbed.Mixfile do
     [
       app: :oembed,
       version: @version,
-      elixir: "~> 1.3",
+      elixir: "~> 1.11",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -22,7 +22,6 @@ defmodule OEmbed.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [
-      applications: [:httpoison, :exconstructor],
       extra_applications: [:logger],
       env: [providers: []]
     ]
