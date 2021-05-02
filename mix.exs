@@ -42,11 +42,11 @@ defmodule OEmbed.Mixfile do
       {:floki, ">= 0.24.0"},
       {:poison, ">= 1.5.0"},
       {:exconstructor, ">= 1.0.0"},
-      {:exvcr, "~> 0.11", only: :test},
+      {:exvcr, "~> 0.12", only: :test},
       {:inch_ex, ">= 0.0.0", only: :docs},
       {:earmark, ">= 0.0.0", only: :dev},
-      {:ex_doc, "~> 0.22", only: :dev, runtime: false},
-      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false}
+      {:ex_doc, "~> 0.24.2", only: :dev, runtime: false},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
     ]
   end
 
