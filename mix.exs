@@ -1,6 +1,7 @@
 defmodule OEmbed.Mixfile do
   use Mix.Project
 
+  @source_url "https://github.com/r8/elixir-oembed"
   @version "0.4.1"
 
   def project do
@@ -10,16 +11,12 @@ defmodule OEmbed.Mixfile do
       elixir: "~> 1.11",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      description: description(),
       package: package(),
       docs: docs(),
       deps: deps()
     ]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
   def application do
     [
       extra_applications: [:logger],
@@ -27,15 +24,6 @@ defmodule OEmbed.Mixfile do
     ]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:my_dep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
   defp deps do
     [
       {:httpoison, ">= 0.9.0"},
@@ -52,24 +40,27 @@ defmodule OEmbed.Mixfile do
 
   defp docs do
     [
+      extras: [
+        "CHANGELOG.md": [title: "Changelog"],
+        "LICENSE.md": [title: "License"],
+        "README.md": [title: "Overview"]
+      ],
+      main: "readme",
       source_url: "https://github.com/r8/elixir-oembed",
       source_ref: "v#{@version}",
-      main: "readme",
-      extras: ["README.md"]
+      formatters: ["html"]
     ]
-  end
-
-  defp description do
-    """
-    oEmbed consumer library for Elixir applications.
-    """
   end
 
   defp package do
     [
+      description: "oEmbed consumer library for Elixir applications.",
       maintainers: ["Sergey Storchay"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/r8/elixir-oembed"}
+      links: %{
+        "Changelog" => "https://hexodcs.pm/oembed/changelog.html",
+        "Github" => @source_url
+      }
     ]
   end
 end

@@ -1,8 +1,11 @@
 # OEmbed
 
 [![CI](https://github.com/r8/elixir-oembed/workflows/CI/badge.svg)](https://github.com/r8/elixir-oembed/actions?query=workflow%3ACI)
-[![Hex.pm](https://img.shields.io/hexpm/v/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
-[![Hex.pm](https://img.shields.io/hexpm/dt/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
+[![Module Version](https://img.shields.io/hexpm/v/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg?style=flat-square)](https://hexdocs.pm/oembed/)
+[![Total Download](https://img.shields.io/hexpm/dt/oembed.svg?style=flat-square)](https://hex.pm/packages/oembed)
+[![License](https://img.shields.io/hexpm/l/oembed.svg?style=flat-square)](https://github.com/r8/elixir-oembed/blob/master/LICENSE.md)
+[![Last Updated](https://img.shields.io/github/last-commit/r8/elixir-oembed.svg?style=flat-square)](https://github.com/r8/elixir-oembed/commits/master)
 
 oEmbed consumer library for Elixir applications.
 
@@ -20,11 +23,13 @@ Among them:
 
 ## Installation
 
-Add `oembed` to your list of dependencies in `mix.exs`:
+Add `:oembed` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:oembed, "~> 0.4.1"}]
+  [
+    {:oembed, "~> 0.4.1"}
+  ]
 end
 ```
 
@@ -41,3 +46,10 @@ You can implement modules that support provider behaviour and add them to the pr
 ```elixir
 config :oembed, :providers, [MyApp.OEmbed.SomeProvider, MyApp.OEmbed.SomeOtherProvider]
 ```
+
+## Copyright and License
+
+Copyright (c) 2017 Sergey Storchay
+
+Released under the MIT License, which can be found in the repository in
+[LICENSE.md](./LICENSE.md).

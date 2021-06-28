@@ -1,5 +1,10 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
 ## [0.4.1] - 2021-01-14
 ### Fixed
 - Call the youtube oembed with https ([@fatboypunk](https://github.com/fatboypunk))
@@ -29,7 +34,7 @@
 
 ## [0.1.1] - 2017-03-08
 ### Fixed
-- Fix crashing when URL is empty or nil. 
+- Fix crashing when URL is empty or nil.
 
 ## [0.1.0] - 2017-02-25
 
