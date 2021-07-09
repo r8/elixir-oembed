@@ -7,7 +7,8 @@ defmodule OEmbed do
     OEmbed.InstagramProvider,
     OEmbed.PinterestProvider,
     OEmbed.VimeoProvider,
-    OEmbed.YoutubeProvider
+    OEmbed.YoutubeProvider,
+    OEmbed.TwitterProvider
   ]
 
   @fallback_providers [OEmbed.DiscoverableProvider]

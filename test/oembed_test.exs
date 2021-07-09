@@ -87,6 +87,19 @@ defmodule OEmbedTest do
     end
   end
 
+  test "gets rich oembed for valid twitter status url" do
+    use_cassette "twitter_status_valid" do
+      {:ok, %Rich{} = oembed} = OEmbed.for("https://twitter.com/jack/status/20")
+      assert oembed.html =~ "just setting up my twttr"
+    end
+  end
+
+  test "gets error response for invalid twitter url" do
+    use_cassette "twitter_status_invalid" do
+      {:error, _} = OEmbed.for("https://www.twitter.com/jack/status/invalid_url/")
+    end
+  end
+
   test "gets rich oembed for valid soundcloud url" do
     use_cassette "soundcloud_valid" do
       {:ok, %Rich{} = oembed} = OEmbed.for("https://soundcloud.com/forss/flickermood")
