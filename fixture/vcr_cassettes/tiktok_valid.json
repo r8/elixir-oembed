@@ -1,0 +1,50 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "follow_redirect": "true",
+        "ssl_options": {
+          "versions": {
+            "tlsv1.2": true
+          }
+        }
+      },
+      "request_body": "",
+      "url": "https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40scout2015%2Fvideo%2F6718335390845095173"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"version\":\"1.0\",\"type\":\"video\",\"title\":\"Scramble up ur name & I’ll try to guess it😍❤️ #foryoupage #petsoftiktok #aesthetic\",\"author_url\":\"https://www.tiktok.com/@scout2015\",\"author_name\":\"Scout, Suki & Stella\",\"width\":\"100%\",\"height\":\"100%\",\"html\":\"<blockquote class=\\\"tiktok-embed\\\" cite=\\\"https://www.tiktok.com/@scout2015/video/6718335390845095173\\\" data-video-id=\\\"6718335390845095173\\\" data-embed-from=\\\"oembed\\\" style=\\\"max-width: 605px;min-width: 325px;\\\" > <section> <a target=\\\"_blank\\\" title=\\\"@scout2015\\\" href=\\\"https://www.tiktok.com/@scout2015?refer=embed\\\">@scout2015</a> <p>Scramble up ur name & I’ll try to guess it😍❤️ <a title=\\\"foryoupage\\\" target=\\\"_blank\\\" href=\\\"https://www.tiktok.com/tag/foryoupage?refer=embed\\\">#foryoupage</a> <a title=\\\"petsoftiktok\\\" target=\\\"_blank\\\" href=\\\"https://www.tiktok.com/tag/petsoftiktok?refer=embed\\\">#petsoftiktok</a> <a title=\\\"aesthetic\\\" target=\\\"_blank\\\" href=\\\"https://www.tiktok.com/tag/aesthetic?refer=embed\\\">#aesthetic</a></p> <a target=\\\"_blank\\\" title=\\\"♬ original sound - tiff\\\" href=\\\"https://www.tiktok.com/music/original-sound-6689804660171082501?refer=embed\\\">♬ original sound - tiff</a> </section> </blockquote> <script async src=\\\"https://www.tiktok.com/embed.js\\\"></script>\",\"thumbnail_width\":720,\"thumbnail_height\":1280,\"thumbnail_url\":\"https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/2367c7d45cf54a1397abd0e72bf22eac?x-expires=1665003600&x-signature=Fpv8iDJCk%2Bt8PO%2F8%2FjE1MNLY4Lc%3D\",\"provider_url\":\"https://www.tiktok.com\",\"provider_name\":\"TikTok\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Tt-Logid": "20221005154816F14388128A319830E5F4",
+        "X-Xss-Protection": "1; mode=block",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "x-tt-trace-host": "0140a3cbc36dbd2901a952d68819c5a5cbe21382bcb1cf4df83480642d2901718f581ee66fc93afe022de4bdec10ba453b9895718999ec854d41ac681115f19628fda5204bc135e5cd882aae960fc06ba6eb7736d92dcf9c9abb3c3f30b7634ecb",
+        "Access-Control-Allow-Origin": "*",
+        "X-Origin-Response-Time": "64,23.45.233.7",
+        "X-Akamai-Request-ID": "1b69d3c8.7a5f8eb",
+        "Expires": "Wed, 05 Oct 2022 15:48:16 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Wed, 05 Oct 2022 15:48:16 GMT",
+        "Content-Length": "1563",
+        "X-Cache": "TCP_MISS from a23-45-12-173.deploy.akamaitechnologies.com (AkamaiGHost/10.9.5-44379351) (-)",
+        "Connection": "keep-alive",
+        "X-Cache-Remote": "TCP_MISS from a23-45-233-7.deploy.akamaitechnologies.com (AkamaiGHost/10.9.5-44379351) (-)",
+        "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+        "Server-Timing": "cdn-cache; desc=MISS, edge; dur=97, origin; dur=64",
+        "X-Parent-Response-Time": "161,23.45.12.173",
+        "Set-Cookie": "_abck=BD0C68FA825306B5EA8113BA8184691B~-1~YAAQrQwtF94iPp+DAQAAylLVqAj8iBkIcUKELOZskzFbnO2pr8sYgc7UJCSSj+NWtQrYR49yiwQKnodkVSFDk7QckimIYrRRaFb9hxSciev1yfK9+CG+TncxsggVkloUI7OoLKr0718kCZjX0AncP8n87LiO/UGbqPE/Bi6P2L5oJGT6bgXQec5XsokrJxHCc3DXGYtjztay1OS3TEZBBogksGKtw/ilawqe2TEiemyt0wT1hHECaOXEaZSaKwm44HGggaFUju3J+mK4igrWYW/Zij1nQkW5+GWu3C/7HCjyY22yYmMKwJMzFgYUp068IBbtzBgq5LXA2anRiizh2P/40KS1Qottmq0hFeB9Sm67E4c8tw8aubg=~-1~-1~-1; Domain=.tiktok.com; Path=/; Expires=Thu, 05 Oct 2023 15:48:16 GMT; Max-Age=31536000; Secure"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
