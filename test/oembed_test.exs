@@ -142,4 +142,19 @@ defmodule OEmbedTest do
       assert oembed.html =~ "vimeo"
     end
   end
+
+  test "gets video oembed for valid tiktok video url" do
+    use_cassette "tiktok_valid" do
+      {:ok, %Video{} = oembed} =
+        OEmbed.for("https://www.tiktok.com/@scout2015/video/6718335390845095173")
+
+      assert oembed.html =~ "Scramble up ur name"
+    end
+  end
+
+  test "gets error response for invalid tiktok url" do
+    use_cassette "tiktok_invalid" do
+      {:error, _} = OEmbed.for("https://www.tiktok.com/@scout2015/video/invalid_url")
+    end
+  end
 end

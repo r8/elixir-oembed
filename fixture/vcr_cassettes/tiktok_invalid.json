@@ -1,0 +1,25 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "follow_redirect": "true",
+        "ssl_options": {
+          "versions": {
+            "tlsv1.2": true
+          }
+        }
+      },
+      "request_body": "",
+      "url": "https://www.tiktok.com/@scout2015/video/invalid_url"
+    },
+    "response": {
+      "binary": false,
+      "message": "Something went wrong",
+      "status_code": 400,
+      "type": "ok"
+    }
+  }
+]
