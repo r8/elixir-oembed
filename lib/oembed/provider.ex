@@ -18,7 +18,7 @@ defmodule OEmbed.Provider do
       defp get_oembed(url) do
         opts =
           @default_opts
-          |> Keyword.merge(Application.get_env(:oembed, :request_opts))
+          |> Keyword.merge(Application.compile_env(:oembed, :request_opts))
 
         with {:ok, %HTTPoison.Response{body: body}} <-
                HTTPoison.get(url, [], opts),
