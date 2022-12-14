@@ -13,10 +13,15 @@ defmodule OEmbed.Provider do
       alias OEmbed.Video
 
       @behaviour OEmbed.Provider
+      @default_opts [follow_redirect: true, ssl: [{:versions, [:"tlsv1.2"]}]]
 
       defp get_oembed(url) do
+        opts =
+          @default_opts
+          |> Keyword.merge(Application.get_env(:oembed, :request_opts))
+
         with {:ok, %HTTPoison.Response{body: body}} <-
-               HTTPoison.get(url, [], follow_redirect: true, ssl: [{:versions, [:"tlsv1.2"]}]),
+               HTTPoison.get(url, [], opts),
              {:ok, struct} <- Poison.decode(body),
              resource <- get_resource(struct) do
           {:ok, resource}

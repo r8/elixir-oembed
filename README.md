@@ -41,3 +41,11 @@ You can implement modules that support provider behaviour and add them to the pr
 ```elixir
 config :oembed, :providers, [MyApp.OEmbed.SomeProvider, MyApp.OEmbed.SomeOtherProvider]
 ```
+
+## Custom request options
+
+You can implement extra request options to be fed to HTTPoison, by adding them in the config. This is useful when you would like to do all request via a Proxy for example.
+
+```elixir
+config :oembed, :request_opts, [proxy: "http://my-very-own.webproxy.com:1234", proxy_auth: {"user_name", "password"}]
+```
