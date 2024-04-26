@@ -14,11 +14,12 @@ defmodule OEmbed.Provider do
 
       @behaviour OEmbed.Provider
       @default_opts [follow_redirect: true, ssl: [{:versions, [:"tlsv1.2"]}]]
+      @request_opts Application.compile_env(:oembed, :request_opts, [])
 
       defp get_oembed(url) do
         opts =
           @default_opts
-          |> Keyword.merge(Application.compile_env(:oembed, :request_opts))
+          |> Keyword.merge(@request_opts)
 
         with {:ok, %HTTPoison.Response{body: body}} <-
                HTTPoison.get(url, [], opts),
@@ -39,5 +40,5 @@ defmodule OEmbed.Provider do
   end
 
   @callback provides?(String.t()) :: boolean
-  @callback get(String.t()) :: struct
+  @callback get(String.t()) :: {:ok, String.t()} | {:error, String.t()}
 end
