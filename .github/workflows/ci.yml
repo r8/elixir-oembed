@@ -12,11 +12,11 @@ env:
 jobs:
   static_code_analysis:
     name: Static Code Analysis
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        elixir: [1.11]
-        otp: [23.2]
+        otp: ["26.2.1"]
+        elixir: ["1.16.1", "1.17.3"]
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.6.0
@@ -29,10 +29,10 @@ jobs:
           fetch-depth: 0
 
       - name: Setup
-        uses: erlef/setup-beam@v1
+        uses: erlef/setup-beam@v1.18.2
         with:
+          otp-version: ${{matrix.otp}}
           elixir-version: ${{ matrix.elixir }}
-          otp-version: ${{ matrix.otp }}
 
       - name: Install Dependencies
         if: steps.mix-cache.outputs.cache-hit != 'true'
@@ -51,12 +51,12 @@ jobs:
 
   unit_tests:
     name: Unit Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
-        elixir: [1.11]
-        otp: [23.2]
+        otp: ["26.2.1"]
+        elixir: ["1.16.1", "1.17.3"]
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.6.0
@@ -69,10 +69,10 @@ jobs:
           fetch-depth: 0
 
       - name: Setup
-        uses: erlef/setup-beam@v1
+        uses: erlef/setup-beam@v1.18.2
         with:
+          otp-version: ${{matrix.otp}}
           elixir-version: ${{ matrix.elixir }}
-          otp-version: ${{ matrix.otp }}
 
       - name: Install Dependencies
         if: steps.mix-cache.outputs.cache-hit != 'true'
