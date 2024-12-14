@@ -1,5 +1,21 @@
 # Change Log
 
+## [0.5.0] - 2024-12-14
+
+Maintenance release.
+
+### Fixed
+- Fix "defined in application" runtime warnings ([@alexgleason](https://github.com/alexgleason))
+- Remove unused @requred_keys ([@alexgleason](https://github.com/alexgleason))
+- Fix duplicate keys warnings ([@alexgleason](https://github.com/alexgleason))
+
+### Chore
+
+- Upgrade dev dependencies
+- Remove empty config file
+- Regenerate formatter config and gitignore with the latest Elixir
+- Fix CI workflow
+
 ## [0.4.1] - 2021-01-14
 ### Fixed
 - Call the youtube oembed with https ([@fatboypunk](https://github.com/fatboypunk))
